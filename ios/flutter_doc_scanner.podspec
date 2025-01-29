@@ -3,15 +3,15 @@
 # Run `pod lib lint flutter_doc_scanner.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'flutter_doc_scanner'
-  s.version          = '0.0.1'
+  s.name             = 'auto_scan.me'
+  s.version          = '0.0.2'
   s.summary          = 'A new Flutter project.'
   s.description      = <<-DESC
 A new Flutter project.
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Shirsh Shukla' => 'https://medium.com/@shirsh94' }
+  s.author           = { 'minaa' => 'www.mina.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
