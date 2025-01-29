@@ -1,4 +1,4 @@
-package com.shirsh.flutter_doc_scanner
+package com.auto_scan.me
 
 
 import android.app.Activity

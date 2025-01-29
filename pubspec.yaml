@@ -25,7 +25,7 @@ flutter:
   plugin:
       platforms:
         android:
-          package: com.auto_scan.mes
+          package: com.auto_scan.me
           pluginClass: FlutterDocScannerPlugin
         ios:
           pluginClass: swiftscan_auto
