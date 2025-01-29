@@ -1,138 +1,59 @@
-Doc Scan Me
-Doc Scan Me is a Flutter plugin that allows users to scan documents using the device's camera and save them as images or PDFs. It leverages native iOS and Android capabilities to provide a seamless document scanning experience.
+# DocScanMe
 
-Features
-Document Scanning: Scan documents using the device's camera.
+![DocScanMe Logo](https://github.com/proethiopia/doc_scan_me/blob/main/logo.png) <!-- Replace with your actual image path -->
 
-Save as Images: Save scanned documents as individual images.
+DocScanMe is a simple and efficient document scanning application designed to help users quickly digitize their physical documents. Whether you need to scan receipts, contracts, or any other paper documents, DocScanMe provides a user-friendly interface to capture, enhance, and save your scans in various formats.
 
-Save as PDF: Combine scanned pages into a single PDF file.
+---
 
-Cross-Platform: Works on both iOS and Android.
+## Features
 
-Easy Integration: Simple API for integrating document scanning into your Flutter app.
+- **High-Quality Scans**: Capture clear and sharp images of your documents.
+- **Auto-Edge Detection**: Automatically detects the edges of your document for a perfect scan.
+- **Multiple Formats**: Save your scans as PDF, JPEG, or PNG.
+- **Cloud Integration**: Easily upload your scans to cloud storage services like Google Drive, Dropbox, and more.
+- **OCR Support**: Extract text from your scanned documents using Optical Character Recognition (OCR).
 
-Installation
-Add the following dependency to your pubspec.yaml file:
+---
 
-yaml
-Copy
-dependencies:
-  doc_scan_me: ^1.0.0
-Then, run flutter pub get to install the package.
+## Getting Started
 
-Usage
-1. Import the Package
-dart
-Copy
-import 'package:doc_scan_me/doc_scan_me.dart';
-2. Initialize the Scanner
-Create an instance of DocScanMe:
+### Prerequisites
 
-dart
-Copy
-final docScanMe = DocScanMe();
-3. Scan Documents
-Use the scanDocument method to start the document scanning process:
+- Android or iOS device
+- Internet connection (for cloud integration)
 
-dart
-Copy
-final scannedImages = await docScanMe.scanDocument();
-4. Save as PDF
-To save the scanned documents as a PDF:
+### Installation
 
-dart
-Copy
-final pdfPath = await docScanMe.saveAsPdf(scannedImages);
-print("PDF saved at: $pdfPath");
-5. Save as Images
-To save the scanned documents as individual images:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/proethiopia/doc_scan_me.git
+2. Open the project in your preferred IDE (e.g., Android Studio, Xcode).
 
-dart
-Copy
-final imagePaths = await docScanMe.saveAsImages(scannedImages);
-print("Images saved at: $imagePaths");
-Example
-Here’s a complete example of how to use the doc_scan_me plugin in your Flutter app:
+3. Build and run the application on your device.
 
-dart
-Copy
-import 'package:flutter/material.dart';
-import 'package:doc_scan_me/doc_scan_me.dart';
+#Usage
+1. Launch the DocScanMe app on your device.
 
-void main() {
-  runApp(MyApp());
-}
+2. Position your document within the camera frame.
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Doc Scan Me Example'),
-        ),
-        body: Center(
-          child: ElevatedButton(
-            onPressed: () async {
-              final docScanMe = DocScanMe();
-              final scannedImages = await docScanMe.scanDocument();
-              if (scannedImages != null && scannedImages.isNotEmpty) {
-                final pdfPath = await docScanMe.saveAsPdf(scannedImages);
-                print("PDF saved at: $pdfPath");
-              }
-            },
-            child: Text('Scan Document'),
-          ),
-        ),
-      ),
-    );
-  }
-}
-Platform-Specific Setup
-iOS
-Add the following keys to your Info.plist file to enable camera and photo library access:
+3. The app will automatically detect the edges and capture the scan.
 
-xml
-Copy
-<key>NSCameraUsageDescription</key>
-<string>We need access to your camera to scan documents.</string>
-<key>NSPhotoLibraryUsageDescription</key>
-<string>We need access to your photo library to save scanned documents.</string>
-Run HTML
-Android
-Add the following permissions to your AndroidManifest.xml file:
+4. Enhance the scan using the available tools (e.g., crop, rotate, adjust brightness).
 
-xml
-Copy
-<uses-permission android:name="android.permission.CAMERA" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-Run HTML
-API Reference
-DocScanMe
-Method	Description
-scanDocument()	Opens the document scanner and returns a list of scanned images.
-saveAsPdf(images)	Saves the provided list of images as a PDF and returns the file path.
-saveAsImages(images)	Saves the provided list of images and returns their file paths.
-Contributing
-Contributions are welcome! If you find a bug or have a feature request, please open an issue on the GitHub repository. If you'd like to contribute code, feel free to submit a pull request.
+5. Save or share your scan in your preferred format.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+#Contributing
+We welcome contributions from the community! If you'd like to contribute to DocScanMe, please follow these steps:
 
-Acknowledgments
-Thanks to the Flutter team for creating an amazing framework.
+Fork the repository.
 
-Thanks to the open-source community for their contributions and support.
+1. Create a new branch (git checkout -b feature/YourFeatureName).
 
-Support
-If you have any questions or need help, feel free to reach out:
+2. Commit your changes (git commit -m 'Add some feature').
 
-Email: support@proethiopia.com
+3. Push to the branch (git push origin feature/YourFeatureName).
 
-GitHub Issues: Create an Issue
+4 . Open a pull request.
 
-Enjoy using Doc Scan Me! 🚀
-
-This README provides a clear and concise guide for users to understand, install, and use your doc_scan_me plugin. Let me know if you need further adjustments! 
+   
