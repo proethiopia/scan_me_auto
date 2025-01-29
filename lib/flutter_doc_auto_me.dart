@@ -43,9 +43,3 @@ abstract class Autoscanme extends PlatformInterface {
     throw UnimplementedError('ScanDocuments() has not been implemented.');
   }
 }
-
-class FlutterDocScanner {
-  Future<dynamic> cropImage(String imagePath) {
-    return FlutterDocScannerPlatform.instance.cropImage(imagePath);
-  }
-}
